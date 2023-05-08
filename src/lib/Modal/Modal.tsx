@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { PropsWithChildren } from "react";
 
 interface CardCompanyModalProps extends PropsWithChildren {
+  onOpen?: () => void;
   onClose: () => void;
 }
 const ModalBackground = styled.section`
@@ -31,7 +32,7 @@ const ModalContainer = styled.section`
   font-weight: bolder;
 `;
 
-const Modal = ({ onClose, children }: CardCompanyModalProps) => {
+const Modal = ({ onOpen, onClose, children }: CardCompanyModalProps) => {
   return (
     <>
       <ModalBackground onClick={onClose} />
