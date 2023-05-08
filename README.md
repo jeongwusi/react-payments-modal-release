@@ -15,13 +15,13 @@ npm i react-payments-modal-release
 **Modal 컴포넌트 불러오기**
 
 ```jsx
-import { Modal } from "react-payments-modal-release";
+import Modal from "react-payments-modal-release";
 ```
 
 **Modal 사용하기**
 
 ```jsx
-<Modal onClose={onClose}>
+<Modal onOpen={onOpen} onClose={onClose}>
   <div>우리카드</div>
 </Modal>
 ```
@@ -34,9 +34,9 @@ import { Modal } from "react-payments-modal-release";
 ```jsx
 import { Modal } from "react-payments-modal-release";
 
-const CardCompanyModal = ({ onClose }) => {
+const CardCompanyModal = ({ onOpen, onClose }) => {
   return (
-    <Modal onClose={onClose}>
+    <Modal onOpen={onOpen} onClose={onClose}>
       <div>우리카드</div>
     </Modal>
   );
